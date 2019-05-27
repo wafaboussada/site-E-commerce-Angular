@@ -14,6 +14,9 @@
 				</div>
 			</div>
 		</div> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/assets/css/cart.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/cart_responsive.css"> -->
+		<div>
 		<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(/assets/img/heading-pages-06.jpg);">
 			<h2 class="l-text2 t-center">
 					Shopping Cart
@@ -58,14 +61,14 @@
 										<div class="product_size product_text"><span>Size: </span>L</div>
 										<div class="product_quantity_container">
 											<div class="product_quantity ml-lg-auto mr-lg-auto text-center">
-												<span id="qty" class="product_text product_num model-number">0</span>
-												<div class="qty_sub qty_button trans_200 text-center"><span id="-" class="minus">-</span></div>
-												<div
+												<span id="qty" class="product_text product_num model-number">{{counter}}</span>
+												<div (click)="decrement()" class="qty_sub qty_button trans_200 text-center"><span id="-" class="minus">-</span></div>
+												<div (click)="increment()"
 												class="qty_add qty_button trans_200 text-center"><span id="+" class="plus">+</span></div>
 											</div>
 										</div>
 										<div class="product_total product_text">
-										   <input class="model-price" type="text"value="0"readonly>
+										   <input class="model-price" type="text"value="{{price}}"readonly>
 									    </div>
 										<!-- <div  id="total" class="product_total product_text"><span>Total: </span><span id="total">2</span></div> -->
 									</li>
@@ -259,3 +262,5 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<script src="/src/assets/js/cart.js"></script>

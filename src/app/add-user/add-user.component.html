@@ -1,0 +1,43 @@
+<div class="users">
+    <div class="row_users_row">
+      <div class="container">
+        <form #myForm="ngForm" (ngSubmit)='save(myForm.value)'>
+          <div class="form-group">
+            <label></label>
+            <input [(ngModel)]="user.firstName" 
+            [ngModelOptions]="{standalone: true}" #firstName= "ngModel"
+            type="text" class="form-control" id="formGroupExampleInput" placeholder="firstName" required>
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="user.lastName" 
+            [ngModelOptions]="{standalone: true}" #category= "ngModel"type="text" class="form-control" id="formGroupExampleInput2" placeholder="lastName" required>
+          </div>
+          <div class="form-group">
+            <input [(ngModel)]="user.age" 
+            [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="age" required>
+          </div>
+          <div class="form-group">
+              <input [(ngModel)]="user.price" 
+              [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="price" required>
+            </div>
+            <div class="form-group">
+                <input [(ngModel)]="user.gender" 
+                [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="gender" required>
+              </div>
+              <div class="form-group">
+                  <input [(ngModel)]="user.email" 
+                  [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="email" required>
+                </div>
+                <div class="form-group">
+                    <input [(ngModel)]="user.passWord" 
+                    [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="passWord" required>
+                  </div>
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript">
+    document.getElementById('mySelect')[0].onclick = function(){
+      //On supprime l'option qui a pour valeur "choisir"
+  };
+    </script>

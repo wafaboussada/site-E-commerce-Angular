@@ -1,0 +1,37 @@
+<div class="products">
+  <div class="row_products_row">
+    <div class="container">
+      <form #myForm="ngForm" (ngSubmit)='save(myForm.value)'>
+        <div class="form-group">
+          <label></label>
+          <input [(ngModel)]="product.name" 
+          [ngModelOptions]="{standalone: true}" #name= "ngModel"
+          type="text" class="form-control" id="formGroupExampleInput" placeholder="Nom" required>
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="product.category" 
+          [ngModelOptions]="{standalone: true}" #category= "ngModel"type="text" class="form-control" id="formGroupExampleInput2" placeholder="Category" required>
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="product.price" 
+          [ngModelOptions]="{standalone: true}" type="number" class="form-control" id="formGroupExampleInput2" placeholder="price" required>
+        </div>
+        <div class="form-group">
+          <select onclick="document.getElementById('popup').style.display='none'"
+          [(ngModel)]="product.disponibility" 
+          [ngModelOptions]="{standalone: true}" #disponibility= "ngModel"
+           class="form-control">
+            <option id="popup">disponibilité</option>
+            <option>Disponible</option>
+            <option>Non disponible</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+  document.getElementById('mySelect')[0].onclick = function(){
+    //On supprime l'option qui a pour valeur "choisir"
+};
+  </script>

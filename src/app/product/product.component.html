@@ -1,0 +1,36 @@
+<div class="products">
+  <div class="container">
+      <div class="row_products_row">
+          <button class="btn btn-outline-dark" (click)="addProducttoCategory()">Ajouter un produit </button>
+          <h1></h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">gender</th>
+        <th scope="col">Email</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let pr of products">
+      <tr>
+        <th scope="row">{{pr.id}}</th>
+        <td>{{pr.name | uppercase}}</td>
+        <td>{{pr.disponibility}}</td>
+        <td>{{pr.price}}</td>
+        <td>{{pr.category}}</td>
+        <td>{{pr.created | date:"MM d,y"}}</td>
+        <td><button (click)="editProduct(pr)" class="btn btn-info">Modifier</button></td>
+        <td><button (click)="deleteProduct(pr)" class="btn danger">Supprimer</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+  
